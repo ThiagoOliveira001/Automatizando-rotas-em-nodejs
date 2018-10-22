@@ -3,7 +3,7 @@ const SRC_PATH = __dirname + '../../../src';
 const fs = require('fs');
 const resolve = require('path').resolve;
 
-async function readDir(path, files = []) {
+function readDir(path, files = []) {
     //Pegando caminho absoluto do arquivo
     path = resolve(path);
     //Lendo diretório
@@ -33,6 +33,7 @@ module.exports = async (app) => {
             route.routes.forEach((x) => {
                 x.middleware ? app[x.method](route.url, ...x.middleware, x.controller)
                     : app[x.method](route.url, x.controller);
+                console.log(`app[${x.method}](${route.url}, ${x.controller})`);
             });
         });
     });

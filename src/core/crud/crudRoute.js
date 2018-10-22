@@ -4,14 +4,14 @@ const md2 = require('../../../api/middlewares/md2');
 
 const routes = [
     {
-        url: '/',
+        url: '/crud',
         routes: [
             { method: 'get', controller: ctrl.find, middleware: [md1,md2] },
             { method: 'post', controller: ctrl.create }
         ]
     },
     {
-        url: '/:id',
+        url: '/crud/:id',
         routes: [
             { method: 'put', controller: ctrl.update },
             { method: 'get', controller: ctrl.findOne },

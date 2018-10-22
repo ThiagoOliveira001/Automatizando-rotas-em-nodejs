@@ -4,7 +4,7 @@ const routes = [
     {
         url: '/teste',
         routes: [
-            { method: 'get', controller: ctrl.find },
+            { method: 'get', controller: ctrl.find }, 
             { method: 'post', controller: ctrl.create }
         ]
     },
