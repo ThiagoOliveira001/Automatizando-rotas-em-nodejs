@@ -33,7 +33,6 @@ module.exports = async (app) => {
             route.routes.forEach((x) => {
                 x.middleware ? app[x.method](route.url, ...x.middleware, x.controller)
                     : app[x.method](route.url, x.controller);
-                console.log(`app[${x.method}](${route.url}, ${x.controller})`);
             });
         });
     });

@@ -2,7 +2,6 @@ function find(req, res, next) {
     res.send('list');
 }  
 function findOne (req, res, next) {
-    console.log(req);
     res.send('get');
 }
 function create(req, res, next) {
