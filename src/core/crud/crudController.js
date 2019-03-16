@@ -1,17 +1,17 @@
 function find(req, res, next) { 
-    res.send('list');
+    res.ok('list');
 }  
 function findOne (req, res, next) {
-    res.send('get');
+    res.ok('get');
 }
 function create(req, res, next) {
-    res.send('create');
+    res.ok('create');
 }
 function update(req, res, next) {
-    res.send('update');
+    res.ok('update');
 }
 function remove(req, res, next) {
-    res.send('remove');
+    res.ok('remove');
 }
 
 module.exports = {

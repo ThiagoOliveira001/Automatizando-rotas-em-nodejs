@@ -21,7 +21,7 @@ function readDir(path, files = []) {
     return files;
 }
 
-module.exports = async (app) => {
+module.exports = async (app, SRC_PATH) => {
     let files = await readDir(SRC_PATH);
     //Pegando os arquivos com Route.js no nome
     files = files.filter(fl => fl.match(/Route.js$/));

@@ -4,16 +4,16 @@ const routes = [
     {
         url: '/teste',
         routes: [
-            { method: 'get', controller: ctrl.find }, 
-            { method: 'post', controller: ctrl.create }
+            { method: 'get', ctrl: ctrl.find }, 
+            { method: 'post', ctrl: ctrl.create }
         ]
     },
-    {
+    { 
         url: '/teste/:id',
         routes: [
-            { method: 'put', controller: ctrl.update },
-            { method: 'get', controller: ctrl.findOne },
-            { method: 'delete', controller: ctrl.remove }
+            { method: 'put', ctrl: ctrl.update },
+            { method: 'get', ctrl: ctrl.findOne },  
+            { method: 'delete', ctrl: ctrl.remove }
         ]
     }
 ];

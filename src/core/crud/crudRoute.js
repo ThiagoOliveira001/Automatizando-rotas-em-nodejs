@@ -6,16 +6,16 @@ const routes = [
     {
         url: '/crud',
         routes: [
-            { method: 'get', controller: ctrl.find, middleware: [md1,md2] },
-            { method: 'post', controller: ctrl.create }
+            { method: 'get', ctrl: ctrl.find, middleware: [md1,md2] },
+            { method: 'post', ctrl: ctrl.create }
         ]
     },
     {
         url: '/crud/:id',
         routes: [
-            { method: 'put', controller: ctrl.update },
-            { method: 'get', controller: ctrl.findOne },
-            { method: 'delete', controller: ctrl.remove }
+            { method: 'put', ctrl: ctrl.update },
+            { method: 'get', ctrl: ctrl.findOne },
+            { method: 'delete', ctrl: ctrl.remove }
         ]
     }
 ];
